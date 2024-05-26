@@ -1,0 +1,16 @@
+.dashboard_grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+#dashboard_grid_child{
+    border-radius: .5rem;
+}
+.rightsidebar_div,
+.main_div {
+    padding: 1rem;
+}
+.main_div {
+    grid-column: 2/4;
+}
