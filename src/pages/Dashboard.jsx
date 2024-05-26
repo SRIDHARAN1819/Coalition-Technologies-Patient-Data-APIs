@@ -6,10 +6,10 @@ const { Header, LeftSidebar, Main, RightSidebar } = components;
 
 function Dashboard() {
   return (
-    <div className="w-full h-[100%] bg-custom-lightGray p-5">
+    <div className="w-full h-[100%] bg-custom-lightGray p-8">
       <Header />
       {/* Dashboard Grid */}
-      <div className="dashboard_grid w-full mt-8">
+      <div className="dashboard_grid w-full mt-10">
         <LeftSidebar />
         <Main />
         <RightSidebar />

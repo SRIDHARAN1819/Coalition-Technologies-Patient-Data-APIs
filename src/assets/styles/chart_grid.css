@@ -1,0 +1,23 @@
+.chartgrid_div {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-auto-rows: 150px; */
+    gap: 1.5rem;
+  }
+  
+  .chartgrid_div .gridchild_div {
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+  }
+  
+  .chartgrid_div .gridchild_div:nth-child(1) {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    background-color: rgb(242, 157, 157);
+  }
+/*   
+  .gridchild_div:nth-child(2),
+  .gridchild_div:nth-child(3),
+  .gridchild_div:nth-child(4) {
+    background-color: skyblue;
+  } */

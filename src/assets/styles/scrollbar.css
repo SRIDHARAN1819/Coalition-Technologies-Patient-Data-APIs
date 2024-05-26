@@ -1,0 +1,39 @@
+.cards {
+    overflow-y: auto;  /* Enable vertical scrolling */
+    scrollbar-width: thin;  /* Firefox */
+    scrollbar-color: black black; 
+  }
+  
+  /* WebKit-based browsers (Chrome, Safari) */
+  .cards::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: #f6f7f8; /* Track color */
+    border-radius: 10px;
+    height: 5px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    /* background-color: #01f0d0;  */
+    border-radius: 20px;
+    border: 2px solid #f6f7f8; /* Space around scrollbar */
+  }
+  
+  /* Edge */
+  .cards::-ms-scrollbar {
+    width: 8px;
+  }
+  
+  .cards::-ms-scrollbar-track {
+    background: #f6f7f8;
+  }
+  
+  .cards::-ms-scrollbar-thumb {
+    /* background-color: #01f0d0; */
+    border-radius: 20px;
+    border: 2px solid #f6f7f8;
+  }
+  

@@ -1,14 +1,13 @@
 .dashboard_grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 2rem;
+    grid-template-columns: 1.1fr 1fr 1fr 1.1fr;
+    gap: 2.5rem;
 }
 
 #dashboard_grid_child{
     border-radius: .5rem;
 }
-.rightsidebar_div,
-.main_div {
+.rightsidebar_div {
     padding: 1rem;
 }
 .main_div {

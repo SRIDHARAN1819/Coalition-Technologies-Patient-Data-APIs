@@ -5,14 +5,14 @@ import { useErrorAndLoading } from "../context/ErrorLoadingContext";
 import { fetchUserDetails } from "../api/api";
 import ReusableProfile from "./shared-components/ReusableProfile";
 import horizontal_menu from "../assets/svgs/horizontal_menu.svg";
+import { useSelectedIndex } from "../context/SelectedIndexContext";
+import "../assets/styles/scrollbar.css";
 
 function LeftSidebar() {
   const [data, setData] = useState();
   const { setError, error, setLoading } = useErrorAndLoading();
+  const { selectedIndex, updateSelectedIndex } = useSelectedIndex();
   const loadingState = true;
-  const [selectedIndex, setSelectedIndex] = useState(3); 
-
-  console.log(data);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,19 +39,22 @@ function LeftSidebar() {
   }
 
   const handleProfileClick = (index) => {
-    setSelectedIndex(index);
+    updateSelectedIndex(index);
   };
 
   return (
-    <div id="dashboard_grid_child" className="leftsidebar_div bg-custom-white h-screen py-4 pr-2">
+    <div
+      id="dashboard_grid_child"
+      className="leftsidebar_div bg-custom-white h-screen py-4 pr-2"
+    >
       {/* Title */}
       <div className="flex justify-between items-center">
         <h1 className="font-semibold text-2xl pl-4">Patients</h1>
-        <img src={search_icon} alt="search icon" className="pr-2"/>
+        <img src={search_icon} alt="search icon" className="pr-2" />
       </div>
       {/* Cards */}
-      <section className="cards mt-5">
-        {data.slice(0, 10).map((item, index) => (
+      <section className="cards mt-5 max-h-[600px]">
+        {data.slice(0, 12).map((item, index) => (
           <ReusableProfile
             key={index}
             image={item.profile_picture}
@@ -59,6 +62,7 @@ function LeftSidebar() {
             age_height={`${item.gender}, ${item.age}`}
             isSelected={index === selectedIndex}
             onClick={() => handleProfileClick(index)}
+            icon={horizontal_menu}
           />
         ))}
       </section>
