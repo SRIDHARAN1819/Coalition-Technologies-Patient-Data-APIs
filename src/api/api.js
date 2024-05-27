@@ -3,9 +3,9 @@ import axios from 'axios';
 
 
 
-const username = process.env.REACT_APP_USERNAME;
-const password = process.env.REACT_APP_PASSWORD;
-const apiUrl = process.env.REACT_APP_BASE_URL;
+const username = 'coalition';
+const password = 'skills-test';
+const apiUrl = 'https://fedskillstest.coalitiontechnologies.workers.dev';
 
 // Encoding the username and password using Base64
 const credentials = `${username}:${password}`;
