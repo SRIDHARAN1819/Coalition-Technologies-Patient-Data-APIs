@@ -1,7 +1,7 @@
 .dashboard_grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
-    /* grid-template-columns: 367px 766px 367px; */
+    /* grid-template-columns: 1.2fr 1fr 1fr 1.2fr; */
+    grid-template-columns: 367px 766px 367px;
     gap: 1.5rem;
 }
 
@@ -9,6 +9,6 @@
     border-radius: .5rem;
 }
 
-.main_div {
+/* .main_div {
     grid-column: 2/4;
-}
+} */
