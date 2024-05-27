@@ -53,7 +53,7 @@ function LeftSidebar() {
         <img src={search_icon} alt="search icon" className="pr-2" />
       </div>
       {/* Cards */}
-      <section className="cards mt-5 max-h-[600px]">
+      <section id="cards" className="cards mt-5 max-h-[500px]">
         {data.slice(0, 12).map((item, index) => (
           <ReusableProfile
             key={index}

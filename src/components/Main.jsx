@@ -6,6 +6,8 @@ import { fetchUserDetails } from "../api/api";
 import { useSelectedIndex } from "../context/SelectedIndexContext";
 import { useErrorAndLoading } from "../context/ErrorLoadingContext";
 import { jessicaTaylor } from "../data";
+import LineChart from "./shared-components/LineChart";
+import Table from "./shared-components/Table";
 
 function Main() {
   const [data, setData] = useState(null);
@@ -25,7 +27,6 @@ function Main() {
     fetchUserData();
   }, [selectedIndex]);
 
-  // Ensure data is available and valid before rendering
   if (!data) {
     return <div>Loading...</div>;
   }
@@ -35,7 +36,11 @@ function Main() {
       <div className="chartContainer rounded-[0.5rem] bg-custom-white w-full p-4">
         <h1 className="font-semibold text-2xl">Diagnostic History</h1>
         <div className="chartgrid_div mt-5">
-          <div className="gridchild_div">1</div>
+          <div className="gridchild_div">
+            <LineChart
+              details={data && data.length > 1 ? data[selectedIndex] : null}
+            />
+          </div>
           {jessicaTaylor.map((item, index) => (
             <ChartGridCards
               key={index}
@@ -49,6 +54,8 @@ function Main() {
           ))}
         </div>
       </div>
+              {/* Table */}
+              <Table details={data.length > 1 && data[selectedIndex]} />
     </div>
   );
 }
