@@ -3,9 +3,9 @@ import "../assets/styles/dashboard_grid.css";
 import search_icon from "../assets/svgs/search.svg";
 import { useErrorAndLoading } from "../context/ErrorLoadingContext";
 import { fetchUserDetails } from "../api/api";
+import { useSelectedIndex } from "../context/SelectedIndexContext";
 import ReusableProfile from "./shared-components/ReusableProfile";
 import horizontal_menu from "../assets/svgs/horizontal_menu.svg";
-import { useSelectedIndex } from "../context/SelectedIndexContext";
 import "../assets/styles/scrollbar.css";
 
 function LeftSidebar() {

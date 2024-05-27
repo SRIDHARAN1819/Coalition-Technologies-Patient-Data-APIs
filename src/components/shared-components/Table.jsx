@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../../assets/styles/table.css";
 
 const Table = ({ details }) => {
-  console.log(details && details.diagnostic_list);
   return (
     <div className="mt-8 bg-custom-white p-4 rounded-[0.5rem]">
       <h1 className="font-semibold text-2xl">Diagnostic List</h1>

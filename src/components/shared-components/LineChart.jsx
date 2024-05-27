@@ -101,7 +101,6 @@ const LineChart = ({ details }) => {
       },
     },
   };
-  console.log(details);
 
   const systolicLevels =
     details.diagnosis_history.length > 0 &&

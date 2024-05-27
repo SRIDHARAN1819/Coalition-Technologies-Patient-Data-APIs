@@ -54,7 +54,7 @@ function Main() {
           ))}
         </div>
       </div>
-              {/* Table */}
+              {/* Diagnostic List */}
               <Table details={data.length > 1 && data[selectedIndex]} />
     </div>
   );

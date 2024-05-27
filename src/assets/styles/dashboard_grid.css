@@ -7,9 +7,9 @@
 #dashboard_grid_child{
     border-radius: .5rem;
 }
-.rightsidebar_div {
+/* .rightsidebar_div {
     padding: 1rem;
-}
+} */
 .main_div {
     grid-column: 2/4;
 }
