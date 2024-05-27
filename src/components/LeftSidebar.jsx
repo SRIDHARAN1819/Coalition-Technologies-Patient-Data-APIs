@@ -7,6 +7,7 @@ import { useSelectedIndex } from "../context/SelectedIndexContext";
 import ReusableProfile from "./shared-components/ReusableProfile";
 import horizontal_menu from "../assets/svgs/horizontal_menu.svg";
 import "../assets/styles/scrollbar.css";
+import toast from "react-hot-toast";
 
 function LeftSidebar() {
   const [data, setData] = useState();
@@ -16,15 +17,14 @@ function LeftSidebar() {
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(loadingState);
       try {
         const fetchedData = await fetchUserDetails();
         setData(fetchedData);
-        setLoading(!loadingState);
+        toast.success("Data successfully fetched!")
       } catch (err) {
         setError(err);
+        toast.error(err)
       } finally {
-        setLoading(!loadingState);
       }
     };
     fetchData();
@@ -39,13 +39,17 @@ function LeftSidebar() {
   }
 
   const handleProfileClick = (index) => {
-    updateSelectedIndex(index);
+    if (index === 3) {
+      updateSelectedIndex(index);
+    } else {
+      toast.error("Only Jessica Taylor can be selected");
+    }
   };
 
   return (
     <div
       id="dashboard_grid_child"
-      className="leftsidebar_div bg-custom-white h-screen py-4 pr-2"
+      className="leftsidebar_div bg-custom-white py-4 pr-2"
     >
       {/* Title */}
       <div className="flex justify-between items-center">
@@ -53,14 +57,14 @@ function LeftSidebar() {
         <img src={search_icon} alt="search icon" className="pr-2" />
       </div>
       {/* Cards */}
-      <section id="cards" className="cards mt-5 max-h-[500px]">
+      <section id="cards" className="cards mt-5 max-h-[750px] space-y-2">
         {data.slice(0, 12).map((item, index) => (
           <ReusableProfile
             key={index}
             image={item.profile_picture}
             displayName={item.name}
             age_height={`${item.gender}, ${item.age}`}
-            isSelected={index === selectedIndex}
+            isSelected={index === 3 && selectedIndex === 3}
             onClick={() => handleProfileClick(index)}
             icon={horizontal_menu}
           />

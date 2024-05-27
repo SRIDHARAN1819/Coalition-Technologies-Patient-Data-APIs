@@ -1,7 +1,4 @@
-/* table {
-    border-collapse: separate;
-    border-spacing: 0;
-} */
+
  tr:first-child th:first-child
  {
      border-top-left-radius: 2rem;
@@ -15,7 +12,6 @@
  }
 
  .table-container {
-    max-height: 120px; /* Adjust this height as needed */
     overflow-y: auto;
   }
   

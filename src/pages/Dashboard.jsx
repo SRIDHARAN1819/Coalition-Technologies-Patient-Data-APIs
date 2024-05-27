@@ -2,14 +2,14 @@ import React from "react";
 import { components } from "../components";
 import "../assets/styles/dashboard_grid.css";
 
-const { Header, LeftSidebar, Main, RightSidebar } = components;
-
 function Dashboard() {
+  const { Header, LeftSidebar, Main, RightSidebar } = components;
+
   return (
-    <div className="w-full h-[100%] bg-custom-lightGray p-8">
+    <div className="w-full h-[100%] bg-custom-lightGray p-[1.5rem]">
       <Header />
       {/* Dashboard Grid */}
-      <div className="dashboard_grid w-full mt-10">
+      <div className="dashboard_grid w-full mt-[1.5rem]">
         <LeftSidebar />
         <Main />
         <RightSidebar />

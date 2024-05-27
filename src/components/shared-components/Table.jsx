@@ -3,9 +3,9 @@ import "../../assets/styles/table.css";
 
 const Table = ({ details }) => {
   return (
-    <div className="mt-8 bg-custom-white p-4 rounded-[0.5rem]">
+    <div className="bg-custom-white p-4 rounded-[0.5rem]">
       <h1 className="font-semibold text-2xl">Diagnostic List</h1>
-      <div className="table-container">
+      <div className="table-container max-h-[180px]">
         <table className="mt-5 w-full">
           <thead>
             <tr className="text-xs font-semibold text-left bg-custom-lightGray">

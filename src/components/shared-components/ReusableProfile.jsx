@@ -1,4 +1,3 @@
-// ReusableProfile.jsx
 import React from "react";
 import horizontal_menu_icon from "../../assets/svgs/horizontal_menu.svg";
 import jose_png from "../../assets/png/dr_jose1.png";
@@ -7,7 +6,7 @@ const ReusableProfile = ({
   image = jose_png,
   icon = horizontal_menu_icon,
   displayName = "Dr. Jose Simmons",
-  age_height = "Femal, 56",
+  age_height = "Female, 56",
   isSelected = false,
   onClick,
 }) => {

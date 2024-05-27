@@ -6,10 +6,13 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+
 
 function App() {
   return (
       <Router>
+        <Toaster />
         <Routes>
           <Route path="/patience" element={<Dashboard />} />
           <Route path="/" element={<Navigate to="/patience" replace />} />

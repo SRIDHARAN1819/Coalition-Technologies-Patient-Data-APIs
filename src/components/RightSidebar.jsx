@@ -15,15 +15,12 @@ function RightSidebar() {
   
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(loadingState);
       try {
         const fetchedData = await fetchUserDetails();
         setData(fetchedData);
-        setLoading(!loadingState);
       } catch (err) {
         setError(err);
       } finally {
-        setLoading(!loadingState);
       }
     };
     fetchData();
@@ -36,12 +33,10 @@ function RightSidebar() {
   if (!data) {
     return <div>Loading...</div>;
   }
-  console.log(data[selectedIndex]);
   const details = data[selectedIndex];
-  console.log(data);
 
   return (
-    <div id='dashboard_grid_child' className='rightsidebar_div bg-custom-lightGray space-y-8'>
+    <div id='dashboard_grid_child' className='rightsidebar_div bg-custom-lightGray space-y-[1.5rem]'>
       <DisplayDetails details={details} />
       <LabResults details={details} />
     </div>

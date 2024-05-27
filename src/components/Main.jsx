@@ -32,7 +32,7 @@ function Main() {
   }
 
   return (
-    <div id="dashboard_grid_child" className="main_div bg-transparent">
+    <div id="dashboard_grid_child" className="main_div bg-transparent space-y-[1.5rem]">
       <div className="chartContainer rounded-[0.5rem] bg-custom-white w-full p-4">
         <h1 className="font-semibold text-2xl">Diagnostic History</h1>
         <div className="chartgrid_div mt-5">
@@ -55,7 +55,9 @@ function Main() {
         </div>
       </div>
               {/* Diagnostic List */}
+              <div>
               <Table details={data.length > 1 && data[selectedIndex]} />
+              </div>
     </div>
   );
 }

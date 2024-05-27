@@ -5,6 +5,7 @@ export const useSelectedIndex = () => useContext(SelectedIndexContext);
 
 export const SelectedIndexProvider = ({ children }) => {
   const [selectedIndex, setSelectedIndex] = useState(3);
+  const staticIndex = 3;
 
   const updateSelectedIndex = (index) => {
     setSelectedIndex(index);
