@@ -17,7 +17,7 @@ const LabResults = ({ details }) => {
         {testResults &&
           testResults.map((item, index) => (
             <div
-              className={`w-full flex items-center justify-between ${
+              className={`w-full flex items-center justify-between cursor-pointer ${
                 active === index + 1 ? "bg-custom-lightGray" : ""
               } p-2`}
               key={index + 1}
